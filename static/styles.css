@@ -1,0 +1,54 @@
+/* Add your CSS styles here */
+.row {
+    display: flex;
+}
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+.snake {
+    background-color: green;
+}
+.food {
+    background-color: red;
+}
+
+/* Add your CSS styles here */
+.row {
+    display: flex;
+    justify-content: center; /* Center the cells horizontally within each row */
+}
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+}
+.snake {
+    background-color: green;
+}
+.food {
+    background-color: red;
+}
+
+    <style>
+        body {
+            background-image: url('templates/retarded_snake.jpg');
+            background-repeat: repeat; /* Image will repeat both horizontally and vertically */
+        }
+    </style>
+
+/* Center the game container */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the container horizontally */
+    justify-content: center; /* Center the container vertically */
+    height: 70vh; /* You can adjust the height as needed */
+}
+
+#score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

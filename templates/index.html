@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sikidjalska zmiq</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            text-align: center; /* Center-align all text within the body */
+        }
+
+        #title {
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+
+        #image-container {
+            margin-top: 20px; /* Adjust the margin as needed to separate the title and image */
+        }
+
+        #image-container img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>Sikidjalska zmiq</h1>
+        <img src="https://fi.somethingawful.com/is/img215/8243/retardeddragon5db.jpg" alt="Image Description">
+    </div>
+    <div id="game-container" class="center">
+        <!-- Game grid will be displayed here -->
+    </div>
+    <div id="score">Score: 0</div>
+
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+    <h4>Made by H.Hristov | nysgoth</h4>
+</body>
+</html>
