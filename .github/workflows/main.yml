@@ -28,8 +28,8 @@ jobs:
 
     - name: Execute DockerHub Login Script
       run: |
-       chmod +x your-script.sh
-       ./your-script.sh
+       chmod +x docker_login.sh
+       ./docker_login.sh
 
     - name: Push Docker image to Docker Hub
       if: github.event_name == 'push'  # Optional: Only push on push events
