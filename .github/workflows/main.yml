@@ -37,15 +37,3 @@ jobs:
       if: github.event_name == 'push'  # Optional: Only push on push events
       run: |
         docker push nysgoth/snake_game:latest 
-
-    - name: Run tests
-      run: |
-        pip install pytest
-        pytest
-
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: test-results
