@@ -28,6 +28,7 @@ jobs:
 
     - name: Execute DockerHub Login Script
       run: |
+       echo "$(pwd)"
        chmod +x docker_login.sh
        ./docker_login.sh
 
