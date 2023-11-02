@@ -36,7 +36,7 @@ jobs:
     - name: Push Docker image to Docker Hub
       if: github.event_name == 'push'  # Optional: Only push on push events
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/snake_game:latest
+        docker push nysgoth/snake_game:latest 
 
     - name: Run tests
       run: |
