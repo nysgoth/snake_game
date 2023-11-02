@@ -1,4 +1,4 @@
-name: Python App Unit Testing
+name: Python App with Docker
 
 on:
   push:
@@ -21,7 +21,19 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install Flask==2.0.1  # Specify the desired Flask version
+
+    - name: Build Docker image
+      run: docker build -t snake_game -f Dockerfile .
+
+    - name: Login to Docker Hub with Access Token
+      run: |
+        echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+    - name: Push Docker image to Docker Hub
+      if: github.event_name == 'push'  # Optional: Only push on push events
+      run: |
+        docker push ${{ secrets.DOCKER_USERNAME }}/snake_game:latest
 
     - name: Run tests
       run: |
