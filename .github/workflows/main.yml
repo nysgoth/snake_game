@@ -24,7 +24,7 @@ jobs:
         pip install Flask==2.0.1  # Specify the desired Flask version
 
     - name: Build Docker image
-      run: docker build -t snake_game -f Dockerfile .
+      run: docker build -t nysgoth/snake_game -f Dockerfile .
 
     - name: Execute DockerHub Login Script
       run: |
